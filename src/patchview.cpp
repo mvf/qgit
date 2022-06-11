@@ -18,7 +18,7 @@ PatchView::PatchView(MainImpl* mi, Git* g) : Domain(mi, g, false) {
 
 	patchTab = new Ui_TabPatch();
 	patchTab->setupUi(container);
-	SCRef ic(QString::fromUtf8(":/icons/resources/plusminus.svg"));
+	SCRef ic(QString::fromUtf8(":/icons/resources/plusminus.png"));
 	patchTab->buttonFilterPatch->setIcon(QIcon(ic));
 
 	QButtonGroup* bg = new QButtonGroup(this);
@@ -73,15 +73,15 @@ void PatchView::buttonFilterPatch_clicked() {
 	pc->prevFilter = pc->curFilter;
 	if (pc->curFilter == PatchContent::VIEW_ALL) {
 		pc->curFilter = PatchContent::VIEW_ADDED;
-		ic = QString::fromUtf8(":/icons/resources/plusonly.svg");
+		ic = QString::fromUtf8(":/icons/resources/plusonly.png");
 
 	} else if (pc->curFilter == PatchContent::VIEW_ADDED) {
 		pc->curFilter = PatchContent::VIEW_REMOVED;
-		ic = QString::fromUtf8(":/icons/resources/minusonly.svg");
+		ic = QString::fromUtf8(":/icons/resources/minusonly.png");
 
 	} else if (pc->curFilter == PatchContent::VIEW_REMOVED) {
 		pc->curFilter = PatchContent::VIEW_ALL;
-		ic = QString::fromUtf8(":/icons/resources/plusminus.svg");
+		ic = QString::fromUtf8(":/icons/resources/plusminus.png");
 	}
 	patchTab->buttonFilterPatch->setIcon(QIcon(ic));
 	patchTab->textEditDiff->refresh();

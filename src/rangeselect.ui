@@ -13,9 +13,8 @@
   <property name="windowTitle">
    <string>Range select</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="icons.qrc">
-    <normaloff>:/icons/resources/join.svg</normaloff>:/icons/resources/join.svg</iconset>
+  <property name="windowIcon" >
+   <iconset resource="icons.qrc" >:/icons/resources/range_select.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
